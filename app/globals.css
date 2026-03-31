@@ -1,0 +1,33 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 248 250 252;
+  --surface: 241 245 249;
+  --fg: 15 23 42;
+  --muted: 71 85 105;
+  --border: 226 232 240;
+  --accentA: 59 130 246;
+  --accentB: 139 92 246;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgb(var(--accentA) / 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-3xl border border-border bg-white/70 shadow-[0_1px_0_0_rgb(15_23_42_/_0.04),0_12px_40px_rgb(2_6_23_/_0.08)] backdrop-blur-md;
+  }
+}
