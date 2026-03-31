@@ -54,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     title: "Aviation Overseas Supply (Current Company Project)",
-    type: "Project",
+    type: "Client Work",
     description:
       "Worked on this project during my internship, focusing on building clean and responsive UI sections. Improved layout structure, spacing, and overall consistency to make the site feel more professional and easy to navigate.",
     tech: ["Responsive UI", "Layout Design", "Frontend Development"],
@@ -63,12 +63,11 @@ export const projects: Project[] = [
   },
   {
     title: "Jyoti Polymers (Internship Project)",
-    type: "Projects",
+    type: "Client Work",
     description:
       "Currently working on this project as part of my company work. Focused on delivering a clean, content-first UI with simple navigation, consistent typography, and fast loading performance for a better user experience.",
     tech: ["Frontend Development", "Typography", "Performance Optimization"],
     image: "/projects/Jyoti Polymers (1).png",
     liveUrl: "https://jyotipolymers.com/"
   }
-
 ];
