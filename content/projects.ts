@@ -67,7 +67,7 @@ export const projects: Project[] = [
     description:
       "Currently working on this project as part of my company work. Focused on delivering a clean, content-first UI with simple navigation, consistent typography, and fast loading performance for a better user experience.",
     tech: ["Frontend Development", "Typography", "Performance Optimization"],
-    image: "/projects/Jyoti Polymers (1).png",
+    image: "/projects/Jyoti Polymers.png",
     liveUrl: "https://jyotipolymers.com/"
   }
 ];
