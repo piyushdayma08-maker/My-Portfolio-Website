@@ -1,4 +1,4 @@
-# Piyush Dayma — Premium Portfolio (Frontend-only, Light Mode)
+# Piyush Dayma — Premium Portfolio
 
 Tech:
 - Next.js (App Router)
