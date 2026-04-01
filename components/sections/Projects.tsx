@@ -99,7 +99,6 @@ function Featured() {
     </Card>
   );
 }
-
 function PersonalCard({
   idx,
   className
@@ -108,39 +107,50 @@ function PersonalCard({
   className?: string;
 }) {
   const p = projects[idx]!;
-  const reduced = useReducedMotion() ?? false;
 
   return (
-    <motion.article
-      whileHover={reduced ? undefined : { y: -3 }}
-      transition={{ duration: 0.22 }}
-      className={className}
-    >
-      <Card className="overflow-hidden">
+    <article className={`h-full ${className}`}>
+      <Card className="h-full flex flex-col overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+        
+        {/* Image */}
         <div className="relative aspect-[16/10] w-full overflow-hidden">
           <Image
             src={p.image}
             alt={`${p.title} preview`}
             fill
-            className="object-cover transition duration-500 group-hover:scale-[1.05]"
+            className="object-cover"
             sizes="(min-width: 1024px) 33vw, 100vw"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
-          <div className="absolute left-4 top-4 rounded-full border border-border bg-white/80 px-3 py-1 text-[10px] text-muted backdrop-blur-md">
+          <div className="absolute left-4 top-4 rounded-full border border-gray-200 bg-white px-3 py-1 text-[10px] text-gray-600">
             Personal Project
           </div>
         </div>
 
-        <div className="p-6">
-          <div className="text-sm font-semibold">{p.title}</div>
-          <div className="mt-2 text-sm leading-relaxed text-muted">{p.description}</div>
-          <TechBadges tech={p.tech} />
+        {/* Content */}
+        <div className="p-6 flex flex-col flex-grow">
+          <div className="text-sm font-semibold min-h-[44px]">
+            {p.title}
+          </div>
+
+          <div className="mt-2 text-sm leading-relaxed text-gray-600 flex-grow">
+            {p.description}
+          </div>
+
+          <div className="mt-4">
+            <TechBadges tech={p.tech} />
+          </div>
+
           <div className="mt-6">
-            <PersonalLinks liveUrl={p.liveUrl} githubUrl={p.githubUrl} />
+            <PersonalLinks
+              liveUrl={p.liveUrl}
+              githubUrl={p.githubUrl}
+            />
           </div>
         </div>
+
       </Card>
-    </motion.article>
+    </article>
   );
 }
 

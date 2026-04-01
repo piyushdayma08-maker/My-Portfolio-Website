@@ -48,7 +48,7 @@ export const projects: Project[] = [
     type: "Personal Project",
     description:
       "A SaaS dashboard concept where the focus is component structure: cards, charts placeholders, and consistent spacing across dense screens.",
-    tech: ["React", "Tailwind", "Component System", "UI Consistency"],
+    tech: ["React", "Tailwind", "Component System"],
     image: "/projects/FlowDesk.png",
     githubUrl: "https://github.com/piyushdayma08-maker/saas-dashboard.git"
   },
